@@ -1,0 +1,21 @@
+{
+    "name": "psingh/dice-cms",
+    "description": "DICE CMS Plugin",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "include\\": "./include"
+            
+        }
+    },
+    "authors": [
+        {
+            "name": "y"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "firebase/php-jwt": "dev-main"
+    }
+}

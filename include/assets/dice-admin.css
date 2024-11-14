@@ -1,0 +1,4 @@
+/* Hide Delete Option from All Sites */
+#form-site-list .row-actions span.delete {
+    display: none;
+}

@@ -1,0 +1,642 @@
+/* Main dashboard styles */
+a {
+    /* transition: none; */
+    color: #c3c4c7;
+}
+body, #wpcontent, #wpbody-content {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+#wpcontent {
+    padding-left: 20px !important;
+}
+
+#wpbody-content {
+    padding-bottom: 40px !important;
+}
+
+/* Dashboard title */
+.wrap h1 {
+    font-size: 32px !important;
+    color: #ffd700 !important;
+    margin-bottom: 20px !important;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5) !important;
+}
+
+/* Dashboard widgets */
+#dashboard-widgets .postbox {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+}
+
+#dashboard-widgets .postbox .hndle {
+    border-bottom: 1px solid #4a4a4a !important;
+    font-size: 18px !important;
+    padding: 12px 15px !important;
+    color: #ffd700 !important;
+    background: linear-gradient(to right, #2c2c2c, #3a3a3a) !important;
+}
+
+#dashboard-widgets .inside {
+    padding: 15px !important;
+}
+
+/* Admin menu */
+#adminmenu {
+    background-color: #2c2c2c !important;
+}
+
+#adminmenu a {
+    color: #e0e0e0 !important;
+    transition: all 0.3s ease !important;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+    background-color: #ffd700 !important;
+    color: #1a1a1a !important;
+}
+
+#adminmenu .wp-submenu {
+    background-color: #3a3a3a !important;
+}
+
+/* Admin bar */
+#wpadminbar {
+    background: linear-gradient(to right, #2c2c2c, #3a3a3a) !important;
+}
+
+#wpadminbar .ab-item {
+    color: #e0e0e0 !important;
+}
+
+/* Buttons */
+.wp-core-ui .button-primary {
+    background-color: #ffd700 !important;
+    border-color: #ffd700 !important;
+    color: #1a1a1a !important;
+    transition: all 0.3s ease !important;
+    text-shadow: none !important;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+    background-color: #ffea00 !important;
+    border-color: #ffea00 !important;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5) !important;
+}
+
+/* Form fields */
+input[type="text"],
+input[type="password"],
+input[type="checkbox"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="radio"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+    background-color: #3a3a3a !important;
+    border: 1px solid #4a4a4a !important;
+    color: #e0e0e0 !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="checkbox"]:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="radio"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3) !important;
+}
+
+/* Dashboard specific styles */
+#dashboard_right_now .main {
+    font-size: 14px !important;
+    color: #e0e0e0 !important;
+}
+
+#dashboard_quick_press .drafts li time {
+    color: #a0a0a0 !important;
+}
+
+#dashboard_activity .subsubsub {
+    color: #a0a0a0 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd700 !important;
+    border-radius: 6px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffea00 !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    .auto-fold #wpcontent {
+        padding-left: 0 !important;
+    }
+
+    #wpbody-content {
+        padding-bottom: 80px !important;
+    }
+
+    .wrap h1 {
+        font-size: 28px !important;
+    }
+
+    #dashboard-widgets .postbox {
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Accessibility improvements */
+.wp-core-ui .button-primary:focus {
+    box-shadow: 0 0 0 1px #1a1a1a, 0 0 0 3px #ffd700 !important;
+}
+
+#adminmenu li > a.menu-top:focus {
+    outline: 2px solid #ffd700 !important;
+}
+
+/* Additional casino-themed elements */
+#dashboard-widgets::before {
+    content: "♠ ♥ ♣ ♦" !important;
+    display: block !important;
+    text-align: center !important;
+    font-size: 24px !important;
+    color: #ffd700 !important;
+    margin-bottom: 20px !important;
+    letter-spacing: 10px !important;
+}
+
+#dashboard-widgets .postbox::before {
+    content: "♠" !important;
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    font-size: 18px !important;
+    color: #ffd700 !important;
+    opacity: 0.5 !important;
+}
+
+#dashboard-widgets .postbox:nth-child(2n)::before {
+    content: "♥" !important;
+}
+
+#dashboard-widgets .postbox:nth-child(3n)::before {
+    content: "♣" !important;
+}
+
+#dashboard-widgets .postbox:nth-child(4n)::before {
+    content: "♦" !important;
+}
+
+
+/* Left Sidebar */
+#adminmenuback, #adminmenuwrap {
+    background-color: #1c1c1c !important;
+    border-right: 1px solid #3a3a3a !important;
+}
+
+#adminmenu {
+    margin: 0 !important;
+    padding-top: 10px !important;
+}
+
+/* Menu Items */
+#adminmenu li {
+    position: relative !important;
+}
+
+#adminmenu a {
+    color: #e0e0e0 !important;
+    transition: all 0.3s ease !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+}
+
+#adminmenu li.menu-top {
+    border-bottom: 1px solid #3a3a3a !important;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+    background-color: #ffd700 !important;
+    color: #1a1a1a !important;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Submenu */
+#adminmenu .wp-submenu {
+    background-color: #2c2c2c !important;
+    border-radius: 0 4px 4px 0 !important;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+#adminmenu .wp-submenu a {
+    color: #b0b0b0 !important;
+    padding: 6px 12px !important;
+}
+
+#adminmenu .wp-submenu a:hover,
+#adminmenu .wp-submenu a:focus {
+    color: #ffd700 !important;
+    background-color: #3a3a3a !important;
+}
+
+/* Active Menu Item */
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+    background-color: #ffd700 !important;
+    color: #1a1a1a !important;
+    font-weight: bold !important;
+}
+
+/* Menu Icons */
+#adminmenu div.wp-menu-image:before {
+    color: #ffd700 !important;
+    opacity: 0.8 !important;
+    transition: all 0.3s ease !important;
+}
+
+#adminmenu li.menu-top:hover div.wp-menu-image:before,
+#adminmenu li.opensub > a.menu-top div.wp-menu-image:before {
+    color: #1a1a1a !important;
+    opacity: 1 !important;
+}
+
+/* Collapse Menu Button */
+#collapse-button {
+    color: #ffd700 !important;
+    transition: all 0.3s ease !important;
+}
+
+#collapse-button:hover {
+    color: #ffea00 !important;
+}
+
+/* Folded Menu State */
+.folded #adminmenu .wp-has-current-submenu .wp-submenu {
+    background-color: #2c2c2c !important;
+}
+
+.folded #adminmenu .wp-has-current-submenu a.menu-top {
+    background-color: #ffd700 !important;
+    color: #1a1a1a !important;
+}
+
+/* Menu Separator */
+#adminmenu li.wp-menu-separator {
+    height: 1px !important;
+    background-color: #3a3a3a !important;
+    margin: 6px 0 !important;
+}
+
+/* Custom Scrollbar for Menu */
+#adminmenuwrap::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+#adminmenuwrap::-webkit-scrollbar-track {
+    background: #1c1c1c !important;
+}
+
+#adminmenuwrap::-webkit-scrollbar-thumb {
+    background: #ffd700 !important;
+    border-radius: 3px !important;
+}
+
+#adminmenuwrap::-webkit-scrollbar-thumb:hover {
+    background: #ffea00 !important;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 782px) {
+    .auto-fold #adminmenu, 
+    .auto-fold #adminmenuback, 
+    .auto-fold #adminmenuwrap {
+        width: 190px !important;
+    }
+
+    #adminmenu .wp-submenu {
+        left: 190px !important;
+    }
+
+    #adminmenu li.menu-top {
+        min-height: 40px !important;
+    }
+}
+
+/* Accessibility Improvements */
+#adminmenu a:focus {
+    box-shadow: 0 0 0 1px #ffd700, 0 0 2px 1px rgba(255, 215, 0, 0.8) !important;
+}
+
+/* Casino Theme Enhancements */
+#adminmenu::before {
+    content: "♠ ♥ ♣ ♦" !important;
+    display: block !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    color: #ffd700 !important;
+    padding: 10px 0 !important;
+    letter-spacing: 5px !important;
+    border-bottom: 1px solid #3a3a3a !important;
+}
+
+#adminmenu li.menu-top::after {
+    content: "♠" !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 10px !important;
+    transform: translateY(-50%) !important;
+    font-size: 12px !important;
+    color: #ffd700 !important;
+    opacity: 0.5 !important;
+}
+
+#adminmenu li.menu-top:nth-child(2n)::after {
+    content: "♥" !important;
+}
+
+#adminmenu li.menu-top:nth-child(3n)::after {
+    content: "♣" !important;
+}
+
+#adminmenu li.menu-top:nth-child(4n)::after {
+    content: "♦" !important;
+}
+
+/**Widgets **/
+/* ACF Custom Fields */
+.acf-field {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+    border-radius: 4px !important;
+    margin-bottom: 15px !important;
+}
+
+.acf-label {
+    color: #ffd700 !important;
+}
+
+.acf-input input[type="text"],
+.acf-input textarea,
+.acf-input select {
+    background-color: #3a3a3a !important;
+    border: 1px solid #4a4a4a !important;
+    color: #e0e0e0 !important;
+    border-radius: 4px !important;
+}
+
+.acf-input input[type="text"]:focus,
+.acf-input textarea:focus,
+.acf-input select:focus {
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5) !important;
+}
+
+.acf-repeater .acf-row-handle {
+    background-color: #3a3a3a !important;
+    color: #ffd700 !important;
+}
+
+.acf-flexible-content .layout {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+}
+
+/* Admin Widgets */
+.postbox {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.postbox .hndle {
+    border-bottom: 1px solid #4a4a4a !important;
+    background: linear-gradient(to right, #2c2c2c, #3a3a3a) !important;
+    color: #ffd700 !important;
+}
+
+.postbox .inside {
+    color: #e0e0e0 !important;
+}
+
+/* Settings Pages */
+.wrap h2,
+.wrap h3 {
+    color: #ffd700 !important;
+    border-bottom: 1px solid #4a4a4a !important;
+    padding-bottom: 10px !important;
+}
+
+.form-table th {
+    color: #ffd700 !important;
+}
+
+.form-table td {
+    color: #e0e0e0 !important;
+}
+
+/* Toolbar */
+#wpadminbar {
+    background: linear-gradient(to right, #2c2c2c, #3a3a3a) !important;
+}
+
+#wpadminbar .ab-item {
+    color: #e0e0e0 !important;
+}
+
+#wpadminbar .ab-item:hover,
+#wpadminbar .ab-item:focus {
+    background-color: #ffd700 !important;
+    color: #1a1a1a !important;
+}
+
+#wpadminbar .ab-sub-wrapper {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Profile Details */
+#your-profile .form-table {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+    border-radius: 4px !important;
+}
+
+#your-profile .form-table th {
+    color: #ffd700 !important;
+}
+
+#your-profile .form-table td {
+    color: #e0e0e0 !important;
+}
+
+#your-profile input[type="text"],
+#your-profile input[type="email"],
+#your-profile input[type="url"],
+#your-profile textarea {
+    background-color: #3a3a3a !important;
+    border: 1px solid #4a4a4a !important;
+    color: #e0e0e0 !important;
+}
+
+#your-profile input[type="text"]:focus,
+#your-profile input[type="email"]:focus,
+#your-profile input[type="url"]:focus,
+#your-profile textarea:focus {
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5) !important;
+}
+
+/* Plugins Page */
+.plugins .plugin-title {
+    color: #ffd700 !important;
+}
+
+.plugins .row-actions {
+    color: #b0b0b0 !important;
+}
+
+.plugins .active td,
+.plugins .active th {
+    background-color: rgba(255, 215, 0, 0.1) !important;
+}
+
+.plugins .inactive td,
+.plugins .inactive th {
+    background-color: #2c2c2c !important;
+}
+
+.plugin-update-tr .update-message {
+    background-color: #3a3a3a !important;
+    color: #e0e0e0 !important;
+}
+
+/* Casino Theme Enhancements */
+/* .postbox::before,
+#your-profile::before,
+.plugins::before {
+    content: "♠ ♥ ♣ ♦" !important;
+    display: block !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    color: #ffd700 !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 5px !important;
+} */
+
+/* Accessibility Improvements */
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #ffd700 !important;
+    outline-offset: 2px !important;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 782px) {
+    .form-table td {
+        padding: 10px !important;
+    }
+
+    .acf-input input[type="text"],
+    .acf-input textarea,
+    .acf-input select,
+    #your-profile input[type="text"],
+    #your-profile input[type="email"],
+    #your-profile input[type="url"],
+    #your-profile textarea {
+        font-size: 16px !important; /* Prevents zoom on mobile */
+    }
+}
+
+/** Custom Changes**/
+table.wp-list-table.widefat.fixed.striped.table-view-list.posts {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+}
+
+.alternate, .striped>tbody>:nth-child(odd), ul.striped>:nth-child(odd) {
+    background-color: #2c2c2c !important;
+    border: 1px solid #4a4a4a !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+}
+.wp-list-table a {
+    /* transition: none; */
+    color: #c3c4c7;
+}
+.ac_match, .subsubsub a.current {
+    color: #c3c4c7;
+}
+/** Buttons **/
+.wrap .add-new-h2, .wrap .add-new-h2:active, .wrap .page-title-action, .wrap .page-title-action:active {
+    
+    background-color: #ffd700 !important;
+    border-color: #ffd700 !important;
+    color: #1a1a1a !important;
+    transition: all 0.3s ease !important;
+    text-shadow: none !important;
+}
+
+#major-publishing-actions {
+    background-color: #3a3a3a !important;
+    border: 1px solid #4a4a4a !important;
+    color: #e0e0e0 !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    transition: all 0.3s ease !important;
+}

@@ -1,0 +1,44 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Pull to master branch and send notification to Mattermost channel
+          script:
+            # Update the remote with rsync
+            - rsync -zrSlh --stats --delete ./* $DICE_PROD_USER@$DICE_PROD_SERVER:applications/zjrhhcwjds/public_html/wp-content/plugins/dice-cms
+
+            # Install JQ
+            - apt-get update && apt-get install -y jq
+
+            # Notify Mattermost
+            - COMMIT_MESSAGE=$(git log --format=%B -n 1 $BITBUCKET_COMMIT)
+            - COMMIT_DATE=$(git log -n 1 --pretty=format:'%ci' $BITBUCKET_COMMIT)
+            - COMMIT_AUTHOR=$(git log -n 1 --pretty=format:'%an' $BITBUCKET_COMMIT)
+            - >
+              curl -d '{
+                  "channel": "wp-team-activity",
+                  "username": "Bitbucket Pipelines",
+                  "text": "New commit deployed to #dice **master** branch on ```Dice CMS``` with the following message: \n ```\n'"$COMMIT_MESSAGE"'\nEnv: 'Prod'\nDate: '"$COMMIT_DATE"'\nAuthor: '"$COMMIT_AUTHOR"'\n ```"
+                }' -H "Content-Type: application/json" -X POST https://matter.dblexchange.com/hooks/t34yjuo6a3refeeafr3itdauge
+                
+    dev:
+      - step:
+          name: Pull to dev branch and send notification to Mattermost channel
+          script:
+            # Update the remote with rsync
+            - rsync -zrSlh --stats --delete ./* $DICE_USER@$DICE_SERVER:applications/ezqmtzqmaw/public_html/wp-content/plugins/dice-cms
+
+            # Install JQ
+            - apt-get update && apt-get install -y jq
+
+            # Notify Mattermost
+            - COMMIT_MESSAGE=$(git log --format=%B -n 1 $BITBUCKET_COMMIT)
+            - COMMIT_DATE=$(git log -n 1 --pretty=format:'%ci' $BITBUCKET_COMMIT)
+            - COMMIT_AUTHOR=$(git log -n 1 --pretty=format:'%an' $BITBUCKET_COMMIT)
+            - >
+              curl -d '{
+                  "channel": "wp-team-activity",
+                  "username": "Bitbucket Pipelines",
+                  "text": "New commit deployed to #dice **dev** branch on ```Dice CMS``` with the following message: \n ```\n'"$COMMIT_MESSAGE"'\nEnv: 'DEV'\nDate: '"$COMMIT_DATE"'\nAuthor: '"$COMMIT_AUTHOR"'\n ```"
+                }' -H "Content-Type: application/json" -X POST https://matter.dblexchange.com/hooks/t34yjuo6a3refeeafr3itdauge
+                

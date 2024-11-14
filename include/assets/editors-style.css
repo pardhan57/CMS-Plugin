@@ -1,0 +1,18 @@
+#adminmenu, #adminmenuback, #adminmenuwrap {
+    background: #2A3F54 !important;
+}
+#wpcontent #wpadminbar {
+ 
+    background: #2A3F54;
+}
+#adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, #adminmenu .wp-submenu, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu {
+    background: #3b536b !important;
+}
+.wp-core-ui .button-primary {
+    background: rgb(42 63 84) !important;
+    border-color: rgb(42 63 84) !important;
+    color: #fff;
+}
+body {
+    background: #ffff !important;
+}
